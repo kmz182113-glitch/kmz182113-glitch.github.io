@@ -1092,7 +1092,7 @@ p {
   }
 
   .site-header .mobile-home-button {
-    display: inline-flex;
+    display: inline-flex !important;
     grid-column: 1;
     justify-self: start;
   }
