@@ -6,8 +6,10 @@
 */
 
 const header = document.querySelector(".site-header");
+const brandLink = document.querySelector(".brand");
 const navLinks = document.querySelectorAll(".main-nav a, .site-footer a");
 const mobileMenuButton = document.querySelector(".mobile-menu-button");
+const mobileHomeButton = document.querySelector(".mobile-home-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
 
@@ -38,6 +40,17 @@ function toggleMobileMenu() {
   mobileMenuButton.setAttribute("aria-label", willOpen ? "메뉴 닫기" : "메뉴 열기");
 }
 
+function scrollToTop(event, trigger) {
+  // 顶部 logo 和手机端 home 图标都使用这个逻辑回到页面最上方。
+  event.preventDefault();
+  trigger.blur();
+  closeMobileMenu();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
 if (mobileMenuButton && mobileMenu) {
   mobileMenuButton.addEventListener("click", toggleMobileMenu);
 
@@ -62,6 +75,18 @@ if (mobileMenuButton && mobileMenu) {
     if (event.key === "Escape") {
       closeMobileMenu();
     }
+  });
+}
+
+if (mobileHomeButton) {
+  mobileHomeButton.addEventListener("click", (event) => {
+    scrollToTop(event, mobileHomeButton);
+  });
+}
+
+if (brandLink) {
+  brandLink.addEventListener("click", (event) => {
+    scrollToTop(event, brandLink);
   });
 }
 

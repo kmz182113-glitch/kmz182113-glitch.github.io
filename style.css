@@ -84,11 +84,13 @@ p {
   color: var(--blue);
 }
 
+.mobile-home-button,
 .mobile-menu-button,
 .mobile-menu {
   display: none;
 }
 
+.mobile-home-button,
 .mobile-menu-button {
   width: 44px;
   height: 44px;
@@ -97,6 +99,43 @@ p {
   border-radius: var(--radius);
   background: #fff;
   cursor: pointer;
+}
+
+.mobile-home-button {
+  align-items: center;
+  justify-content: center;
+}
+
+.home-icon {
+  position: relative;
+  width: 19px;
+  height: 17px;
+  display: block;
+}
+
+.home-icon::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid var(--blue);
+  border-top: 2px solid var(--blue);
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.home-icon::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  width: 11px;
+  height: 10px;
+  border: 2px solid #172033;
+  border-top: 0;
+  border-radius: 1px 1px 2px 2px;
 }
 
 .mobile-menu-button span {
@@ -1042,9 +1081,25 @@ p {
   }
 
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 42px 1fr 42px;
     padding: 10px 16px;
     border-bottom: 1px solid rgba(223, 230, 241, 0.72);
+  }
+
+  .site-header .brand {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .site-header .mobile-home-button {
+    display: inline-flex;
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .site-header .mobile-menu-button {
+    grid-column: 3;
+    justify-self: end;
   }
 
   .brand img {
@@ -1070,6 +1125,22 @@ p {
     padding: 24px 0 42px;
   }
 
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy .eyebrow {
+    order: 1;
+  }
+
+  .hero h1 {
+    order: 2;
+  }
+
+  .hero-description {
+    order: 3;
+  }
+
   .eyebrow {
     font-size: 12px;
     margin-bottom: 12px;
@@ -1087,8 +1158,9 @@ p {
   }
 
   .hero-actions {
+    order: 5;
     gap: 12px;
-    margin-top: 28px;
+    margin-top: 0;
   }
 
   .primary-button,
@@ -1098,13 +1170,16 @@ p {
   }
 
   .hero-visual {
-    display: none;
+    display: block;
+    order: 4;
+    min-height: 0;
+    margin-top: 4px;
   }
 
   .blueprint-card {
     height: auto;
     min-height: 0;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
     border-radius: 14px;
   }
 
@@ -1121,14 +1196,14 @@ p {
   #projects .three-columns {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(270px, 78%);
+    grid-auto-columns: minmax(300px, 88%);
     grid-template-columns: none;
     gap: 14px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 11%;
-    padding: 0 11% 12px;
+    scroll-padding-inline: 6%;
+    padding: 0 6% 12px;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -1143,6 +1218,7 @@ p {
 
   #projects .project-card {
     scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .problem-card,
@@ -1220,15 +1296,13 @@ p {
   .project-card h3 {
     font-size: 20px;
     line-height: 1.32;
+    min-height: 54px;
   }
 
   .project-card p {
-    display: -webkit-box;
-    overflow: hidden;
     font-size: 15px;
     line-height: 1.7;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    margin-top: 0;
   }
 
   .tag-row {
