@@ -1,0 +1,340 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KJ Archive | 제조업 엔지니어링 통합형 인재</title>
+  <meta
+    name="description"
+    content="제조업 엔지니어링 통합형 개인 웹사이트: 기계설계, CAE 해석, 산업장비 시각화, AI 프로세스 탐색."
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!--
+    index.html 负责网站内容结构。
+    你以后想改文字、项目、联系方式，大部分时候都在这个文件里改。
+    现在网页显示内容是韩语；后续要加中文/英文时，可以把同一段内容翻译成对应语言。
+  -->
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="홈으로 이동">
+      <img src="./assets/logo-light-cropped.png" alt="KJ Archive" />
+    </a>
+
+    <!-- nav 是页面导航。href="#about" 会跳到 id="about" 的区域。 -->
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#projects">주요 역량</a>
+      <a href="#workflow">접근 방식</a>
+      <a href="#capabilities">탐색 방향</a>
+      <a href="#contact">연락처</a>
+    </nav>
+
+    <a class="nav-button" href="mailto:kmz182113@gmail.com">연락하기</a>
+
+    <!-- 手机端菜单按钮。桌面端隐藏，手机端显示。 -->
+    <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴 열기">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- 手机端下拉导航。点击右上角菜单按钮后显示。 -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴">
+      <a href="#about">소개</a>
+      <a href="#projects">주요 역량</a>
+      <a href="#workflow">접근 방식</a>
+      <a href="#capabilities">탐색 방향</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero 是网站第一屏，负责让访问者立刻知道你是谁、做什么。 -->
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">제조업 엔지니어링 통합형 인재</p>
+        <h1>기계설계 <span>|</span> CAE 해석<br />산업장비 시각화 <span>|</span><br />AI 프로세스 탐색</h1>
+        <p class="hero-description">
+          제조업 현장의 문제를 설계, 해석, 시각화, 구매, 협업의 흐름 속에서 바라봅니다. 기계설계와 CAE 해석을 기반으로 구조와 성능, 제작 가능성을 검토하고, 산업장비 3D 시각화를 통해 복잡한 기술 내용을 명확하게 전달합니다. 중국 공급업체 커뮤니케이션과 구매, 프로젝트 조율 경험을 바탕으로 엔지니어링 결과가 실제 실행으로 이어지는 과정을 이해하며, 현재는 AI 프로세스를 기계 엔지니어링 영역에 접목하는 방향을 꾸준히 탐구하고 있습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#projects">주요역량 보기</a>
+          <a class="secondary-button" href="#contact">연락하기</a>
+        </div>
+      </div>
+
+      <!-- 这个视觉区先用 HTML/CSS 搭出工程感，后续可以替换成真实设备图或CAE图片。 -->
+      <div class="hero-visual" aria-label="기계설계, CAE 해석, AI 프로세스 시각 예시">
+        <div class="blueprint-card">
+          <img
+            class="hero-visual-image"
+            src="./assets/hero-overview-visual.jpg"
+            alt="기계설계, CAE 해석, 산업장비 시각화와 AI 프로세스를 연결한 엔지니어링 비주얼"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <article class="profile-card">
+        <div class="profile-photo">
+          <img src="./assets/profile-photo.jpg" alt="김민준 프로필 사진" />
+        </div>
+        <div class="profile-body">
+          <h2>김민준</h2>
+          <p>기계설계 · CAE · 시각화 · 중국 소싱 · 프로젝트 조율 · AI 워크플로우  </p>
+          <p>한양대학교 ERICA · 기계공학 학사</p>
+          <p>경기 / 서울권</p>
+          <a href="mailto:kmz182113@gmail.com">kmz182113@gmail.com</a>
+        </div>
+      </article>
+
+      <div class="about-copy">
+        <p class="eyebrow">About Me</p>
+        <h2>설계부터 검증, 표현, 관리까지 전체 흐름을 연결하는 엔지니어입니다.</h2>
+        <p>
+          저는 단일 기술을 보여주는 것보다 제품과 장비의 아이디어, 구조 설계, CAE 검증, 3D 시각화, 자료 정리, 공급업체 커뮤니케이션, AI 도구를 어떻게 연결해 복잡한 프로젝트를 더 명확하고 추진 가능하며 재사용 가능한 형태로 만드는지에 관심이 있습니다.
+        </p>
+        <div class="value-grid">
+          <div class="value-item"><strong>문제 정의</strong><span>핵심을 먼저 파악</span></div>
+          <div class="value-item"><strong>구조적 사고</strong><span>복잡한 정보를 시스템으로 정리</span></div>
+          <div class="value-item"><strong>검증 중심</strong><span>데이터와 해석으로 리스크 축소</span></div>
+          <div class="value-item"><strong>지식 축적</strong><span>경험을 재사용 가능한 자산으로 전환</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell stacked" id="projects">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="eyebrow">Selected Skill</p>
+          <h2>주요 역량</h2>
+        </div>
+      </div>
+
+      <div class="card-grid three-columns">
+        <article class="project-card">
+          <div class="project-image equipment-image"></div>
+          <div class="project-body">
+            <span class="tag">기계설계</span>
+            <h3>구조 설계와 장비 설계 역량</h3>
+            <p>제품과 산업장비의 구조를 이해하고, 기능 요구사항을 바탕으로 3D 모델링, 조립 관계, 도면화, 제작 가능성을 고려한 설계 방향을 정리합니다.</p>
+            <div class="tag-row"><span>#3D설계</span><span>#장비구조</span><span>#도면화</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image cae-image"></div>
+          <div class="project-body">
+            <span class="tag">CAE 해석</span>
+            <h3>정적·과도·피로·모달 중심 CAE 역량</h3>
+            <p>정적 해석, 과도 해석, 피로 해석, 모달 해석을 중심으로 구조적 리스크를 검토하며, 일부 CFD와 열해석 경험을 바탕으로 설계 검증 관점을 확장하고 있습니다.</p>
+            <div class="tag-row"><span>#정적해석</span><span>#피로해석</span><span>#모달해석</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image visualization-image"></div>
+          <div class="project-body">
+            <span class="tag">장비 시각화</span>
+            <h3>산업장비 구조와 프로세스 시각화</h3>
+            <p>복잡한 장비 구조와 작동 흐름을 3D 이미지, 설명 자료, 영상 기반 콘텐츠로 정리해 기술 내용을 더 직관적으로 전달합니다.</p>
+            <div class="tag-row"><span>#3D시각화</span><span>#설명자료</span><span>#영상콘텐츠</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image sourcing-image"></div>
+          <div class="project-body">
+            <span class="tag">중국 구매</span>
+            <h3>중국 공급업체 소싱과 구매 커뮤니케이션</h3>
+            <p>중국 공급업체 조사, 견적 비교, 사양 확인, 일정 조율을 통해 설계 아이디어가 실제 제작과 구매 단계로 이어질 수 있도록 지원합니다.</p>
+            <div class="tag-row"><span>#중국 소싱</span><span>#견적비교</span><span>#커뮤니케이션</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image ai-image"></div>
+          <div class="project-body">
+            <span class="tag">AI 탐색</span>
+            <h3>제조업 업무 흐름에 AI 적용</h3>
+            <p>현재 가장 집중해서 탐구하는 방향은 AI를 기계공학 업무 프로세스에 적용하는 것입니다. 설계 자료 정리, 해석 결과 설명, 문서화, 지식 축적, 반복 업무 자동화 가능성을 실험하고 있습니다.</p>
+            <div class="tag-row"><span>#AI워크플로우</span><span>#엔지니어링문서</span><span>#탐색방향</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image general-image"></div>
+          <div class="project-body">
+            <span class="tag">외부 실행 리소스</span>
+            <h3>용접 구조물 제작 협력 자원</h3>
+            <p>개인 역량과 별도로, 용접 구조물 제작 경험을 가진 외부 협력 자원을 바탕으로 간단한 제작 의뢰와 소규모 실행 가능성을 검토하고 있습니다.</p>
+            <div class="tag-row"><span>#용접구조물</span><span>#제작협력</span><span>#소규모실행</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell stacked" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">Engineering Toolbox</p>
+        <h2>문제를 이해하고, 필요한 도구를 조합해 프로젝트를 추진합니다</h2>
+      </div>
+
+      <p class="toolbox-intro">
+        모든 프로젝트가 같은 순서로 진행되지는 않습니다. 먼저 문제와 제약을 이해하고,
+        상황에 맞는 엔지니어링 도구를 선택해 조합하면서 프로젝트를 앞으로 밀어냅니다.
+      </p>
+
+      <div class="problem-card">
+        <div>
+          <strong>문제 이해와 방향 설정</strong>
+          <span>
+            바로 설계나 해석으로 들어가기보다, 먼저 무엇을 해결해야 하는지 확인합니다.
+            목표, 제약조건, 요구사항, 제작 가능성, 협업 조건을 정리해 어떤 도구를 조합할지 판단합니다.
+          </span>
+        </div>
+      </div>
+
+      <div class="toolbox-connector single" aria-hidden="true"></div>
+
+      <div class="toolbox-panel">
+        <div class="toolbox-panel-title">
+          <strong>상황에 따라 조합되는 엔지니어링 도구함</strong>
+        </div>
+
+        <div class="toolbox-grid">
+          <article><strong>기계 설계</strong><span>구조 구상 · 3D 모델링 · 도면화</span></article>
+          <article><strong>CAE 검증</strong><span>구조 해석 · 리스크 검토 · 설계 판단 보강</span></article>
+          <article><strong>산업 시각화</strong><span>구조와 작동 방식을 이미지 · 영상으로 전달</span></article>
+          <article><strong>문서화·정리</strong><span>도면 · BOM · 보고서 · 자료 구조화</span></article>
+          <article><strong>외부 협업</strong><span>구매 · 제작 · 공급업체 커뮤니케이션 연결</span></article>
+          <article><strong>AI 활용 탐구</strong><span>정보 정리 · 파일 흐름 · 반복 업무 자동화 실험</span></article>
+        </div>
+      </div>
+
+      <div class="toolbox-connector split" aria-hidden="true">
+        <span class="connector-arrow left"></span>
+        <span class="connector-arrow right"></span>
+      </div>
+
+      <div class="outcome-grid">
+        <article>
+          <strong>프로젝트를 실제로 추진합니다</strong>
+          <span>필요한 도구의 조합이 설계 판단, 검증 근거, 소통 효율, 실행 가능성을 높입니다.</span>
+        </article>
+        <article>
+          <strong>결과는 다시 자산으로 축적됩니다</strong>
+          <span>도면, 해석 결과, 시각 자료, 협업 기록을 다음 프로젝트에서 재사용 가능한 형태로 남깁니다.</span>
+        </article>
+      </div>
+
+      <p class="workflow-note">고정된 순서보다 중요한 것은 문제에 맞는 도구 선택과, 결과가 다음 실행으로 이어지게 만드는 연결입니다.</p>
+    </section>
+
+    <section class="section-shell stacked" id="capabilities">
+      <div class="exploration-layout">
+        <div class="exploration-intro">
+          <p class="eyebrow">Research Direction</p>
+          <h2>현재 탐색 중인 방향</h2>
+          <p>
+            AI는 기계공학 업무에서 먼저 정보 정리 단계에 가장 현실적으로 들어온다고 생각합니다.
+            사람이 자연어로 요청하고, AI가 정보를 이해하고 구조화하며, 필요한 파일과 문서로 출력하는 흐름을 탐색하고 있습니다.
+          </p>
+        </div>
+
+        <div class="exploration-flow" aria-label="AI 기반 정보 정리 흐름">
+          <article class="flow-card">
+            <span class="flow-number">01</span>
+            <div class="flow-icon">...</div>
+            <h3>자연어 요청</h3>
+            <p>사람이 말로 지시</p>
+          </article>
+
+          <span class="flow-arrow">→</span>
+
+          <article class="flow-card">
+            <span class="flow-number">02</span>
+            <div class="flow-icon">AI</div>
+            <h3>AI 정리</h3>
+            <p>정보 이해·구조화</p>
+          </article>
+
+          <span class="flow-arrow">→</span>
+
+          <article class="flow-card">
+            <span class="flow-number">03</span>
+            <div class="flow-icon">PDF</div>
+            <h3>파일 출력</h3>
+            <p>문서 생성·저장</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="llm-strengths">
+        <h3>LLM의 강점</h3>
+        <div class="strength-grid">
+          <div class="strength-item"><span>...</span>자연어 이해</div>
+          <div class="strength-item"><span>▦</span>정보 구조화</div>
+          <div class="strength-item"><span>↔</span>형식 변환</div>
+        </div>
+      </div>
+
+      <div class="application-block">
+        <h3>적용 예시</h3>
+        <div class="application-grid">
+          <article class="application-card">
+            <div class="application-icon">▤</div>
+            <h4>주간보고서</h4>
+            <p>자연어 입력으로 보고서 정리</p>
+          </article>
+
+          <article class="application-card">
+            <div class="application-icon">☑</div>
+            <h4>구매요청서</h4>
+            <p>필요 정보 정리 후 문서 생성</p>
+          </article>
+
+          <article class="application-card">
+            <div class="application-icon">⚙</div>
+            <h4>BOM 정리</h4>
+            <p>부품 정보를 목적에 맞게 정리</p>
+          </article>
+
+        <article class="application-card">
+            <div class="application-icon">✎</div>
+            <h4>회의록·이슈 정리</h4>
+            <p>회의 내용과 작업 이슈를 구조화</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="exploration-note">
+        <span>i</span>
+        <strong>사람의 자연어 요청이 파일과 정보 작업의 시작점이 될 수 있습니다.</strong>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div>
+        <p class="eyebrow">Let's Connect</p>
+        <h2>협업과 논의를 환영합니다.</h2>
+        <p>기계설계, CAE 해석, 산업장비 시각화, AI 워크플로우에 관심이 있다면 편하게 연락해 주세요. 같은 방향을 고민하는 사람들과 아이디어를 나누고 함께 성장하고 싶습니다.</p>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:kmz182113@gmail.com">kmz182113@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-logo" src="./assets/logo-dark-cropped.png" alt="KJ Archive" />
+    <span>© 2026 KJ Archive. Personal portfolio by Kim Minjun.</span>
+    <a href="#top">상단으로</a>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
