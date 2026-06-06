@@ -1562,3 +1562,64 @@ p {
 
 
 
+
+/*
+  iPhone Safari 在中文模式下对 keep-all / nowrap 的处理比桌面 Chrome 更严格，
+  如果某个中文句子或横滑卡片撑宽页面，就会出现右侧大片空白。
+  这里把“页面本体”锁在屏幕宽度内，同时保留技能卡自己的横向滑动。
+*/
+@media (max-width: 640px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .site-footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-shell {
+    width: calc(100% - 32px);
+    max-width: var(--max-width);
+  }
+
+  #projects .three-columns {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #projects .project-card,
+  .hero-copy,
+  .about-copy,
+  .toolbox-panel,
+  .problem-card,
+  .outcome-grid article,
+  .exploration-intro,
+  .contact {
+    min-width: 0;
+  }
+
+  html[lang="zh-CN"] .hero h1,
+  html[lang="zh-CN"] .hero-description,
+  html[lang="zh-CN"] .project-card h3,
+  html[lang="zh-CN"] .project-card p,
+  html[lang="zh-CN"] .toolbox-intro,
+  html[lang="zh-CN"] .problem-card,
+  html[lang="zh-CN"] .toolbox-grid article,
+  html[lang="zh-CN"] .outcome-grid article,
+  html[lang="zh-CN"] .exploration-intro h2,
+  html[lang="zh-CN"] .exploration-intro p,
+  html[lang="zh-CN"] .contact p {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  html[lang="zh-CN"] .hero h1 em {
+    white-space: normal;
+  }
+}
